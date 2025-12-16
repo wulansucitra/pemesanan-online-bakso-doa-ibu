@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Menu Bakso</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<nav>
+    <h2>🍜 Bakso Doa Ibu</h2>
+    <div>
+        <span id="user"></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+</nav>
+
+<header class="section-title">
+    <h1>Menu Pilihan Kami</h1>
+    <p>Nikmati sajian bakso terbaik dengan cita rasa khas dan kualitas terbaik</p>
+</header>
+
+  <!-- ================= MENU ================= -->
+<div class="menu-grid">
+
+    <!-- BAKSO -->
+    <div class="menu-card">
+        <img src="bakso biasa.jpeg">
+        <h3>Bakso Biasa</h3>
+        <h4>Rp 10.000</h4>
+        <button onclick="addCart('Bakso Biasa',10000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="bakso telor.jpeg">
+        <h3>Bakso Telur</h3>
+        <h4>Rp 15.000</h4>
+        <button onclick="addCart('Bakso Telur',15000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="bakso mercon.jpeg">
+        <h3>Bakso Mercon</h3>
+        <h4>Rp 20.000</h4>
+        <button onclick="addCart('Bakso Mercon',20000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="bakso iga.jpeg">
+        <h3>Bakso Iga</h3>
+        <h4>Rp 20.000</h4>
+        <button onclick="addCart('Bakso Iga',20000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="bakso beranak.jpeg">
+        <h3>Bakso Beranak</h3>
+        <h4>Rp 15.000</h4>
+        <button onclick="addCart('Bakso Beranak',15000)">Tambah Pesanan</button>
+    </div>
+
+    <!-- MIE AYAM (2 SAJA) -->
+    <div class="menu-card">
+        <img src="mie ayam bakso.jpeg">
+        <h3>Mie Ayam Bakso</h3>
+        <h4>Rp 15.000</h4>
+        <button onclick="addCart('Mie Ayam Bakso',15000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="mie ayam.jpeg">
+        <h3>Mie Ayam Biasa</h3>
+        <h4>Rp 10.000</h4>
+        <button onclick="addCart('Mie Ayam Biasa',10000)">Tambah Pesanan</button>
+    </div>
+
+    <!-- MINUMAN -->
+    <div class="menu-card">
+        <img src="es teh.jpeg">
+        <h3>Es Teh Manis</h3>
+        <h4>Rp 5.000</h4>
+        <button onclick="addCart('Es Teh Manis',5000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="es jeruk.jpeg">
+        <h3>Es Jeruk</h3>
+        <h4>Rp 5.000</h4>
+        <button onclick="addCart('Es Jeruk',5000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="pop ice.jpeg">
+        <h3>Pop Ice</h3>
+        <h4>Rp 5.000</h4>
+        <button onclick="addCart('Pop Ice',5000)">Tambah Pesanan</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="kopi hitam.jpeg">
+        <h3>Kopi Hitam</h3>
+        <h4>Rp 5.000</h4>
+        <button onclick="addCart('Kopi Hitam',5000)">Tambah Pesanan</button>
+    </div>
+
+</div>
+
+<section class="cart-section">
+  <section class="cart-section">
+    <h2>Resi / Bukti Pesanan</h2>
+    <div id="resi">
+        <p>Belum ada pesanan.</p>
+    </div>
+</section>
+    <h2>Keranjang Pesanan</h2>
+    <ul id="cart"></ul>
+
+<label>Metode Pembayaran</label>
+    <select id="metode">
+        <option>Bayar di Tempat (COD)</option>
+        <option>Dompet Digital (E-Wallet)</option>
+        <option>Transfer Bank</option>
+        <option>Kartu Kredit/Debit</option>
+    </select>
+
+    <button onclick="checkout()">Checkout Pesanan</button>
+</section>
+
+<div id="toastNotification" class="toast-notification"></div>
+
+<script src="script.js"></script>
+<script>
+cekCustomer();
+document.getElementById("user").innerText =
+    "Customer: " + localStorage.getItem("user");
+</script>
+<script>
+cekCustomer();
+</script>
+</body>
+</html>

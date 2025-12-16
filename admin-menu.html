@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel | Kelola Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<nav class="admin-nav">
+    <h2>Admin Panel</h2>
+    <div>
+        <a href="penjualan.html">Penjualan</a>
+        <a href="pemasukan.html">Pemasukan</a>
+        <a href="admin-menu.html" class="active">Kelola Menu</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</nav>
+
+<main class="admin-main">
+
+<section class="admin-form">
+    <h1>Manajemen Menu</h1>
+    <p class="desc">
+        Halaman ini digunakan oleh admin untuk menambahkan, mengelola,
+        dan memperbarui data menu yang akan ditampilkan pada halaman customer.
+    </p>
+
+    <div class="form-grid">
+        <div>
+            <label>Nama Menu</label>
+            <input type="text" id="menu_nama">
+        </div>
+
+        <div>
+            <label>Harga (Rp)</label>
+            <input type="number" id="menu_harga">
+        </div>
+
+        <div>
+            <label>Kategori</label>
+            <select id="menu_kategori">
+                <option value="">-- Pilih --</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Minuman">Minuman</option>
+            </select>
+        </div>
+
+        <div>
+            <label>URL Gambar</label>
+            <input type="text" id="menu_gambar">
+        </div>
+
+        <div class="full">
+            <label>Deskripsi Menu</label>
+            <textarea id="menu_deskripsi" rows="4"></textarea>
+        </div>
+    </div>
+
+    <button class="btn-primary" onclick="adminTambahMenu()">
+        Simpan Menu
+    </button>
+</section>
+
+<section class="admin-table-section">
+    <h2>Daftar Menu</h2>
+
+    <button onclick="hapusSemuaPesanan()" class="reset-btn">
+    Hapus Semua Pesanan & Pemasukan
+</button>
+
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Gambar</th>
+                <th>Nama</th>
+                <th>Kategori</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="adminMenuTable"></tbody>
+    </table>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+<script>
+cekAdmin();
+adminLoadMenu();
+</script>
+
+</body>
+</html>

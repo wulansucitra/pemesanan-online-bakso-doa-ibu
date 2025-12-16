@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bakso Doa Ibu | Sistem Informasi Penjualan</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+<!-- =================== HEADER =================== -->
+<header class="header">
+    <div class="container header-flex">
+        <div class="brand">
+            <span class="logo">🍜</span>
+            <div>
+                <h1>Bakso Doa Ibu</h1>
+                <small>Sistem Informasi Penjualan</small>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a href="#">Beranda</a>
+            <a href="#fitur">Fitur</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </div>
+</header>
+
+<!-- =================== HERO =================== -->
+<section class="hero-section">
+    <div class="container hero-grid">
+
+        <div class="hero-text">
+            <h2>Sistem Informasi Penjualan & Pemasukan</h2>
+            <h3>Berbasis Web – Bakso Doa Ibu</h3>
+
+            <p>
+                Aplikasi ini dirancang untuk mendukung proses bisnis
+                usaha Bakso Doa Ibu dalam melakukan pemesanan,
+                pencatatan transaksi, serta pengelolaan laporan pemasukan
+                secara digital, terstruktur, dan efisien.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <h4>100%</h4>
+                    <span>Digital</span>
+                </div>
+                <div class="stat-box">
+                    <h4>Real-time</h4>
+                    <span>Transaksi</span>
+                </div>
+                <div class="stat-box">
+                    <h4>Akurat</h4>
+                    <span>Laporan</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= LOGIN ================= -->
+        <div class="login-card">
+            <h3>Login Sistem</h3>
+
+            <label>Hak Akses</label>
+            <select id="role">
+                <option value="customer">Customer</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Masukkan username">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Masukkan password">
+
+            <button onclick="login()">Masuk Sistem</button>
+
+            <p class="login-note">
+                * Customer otomatis terdaftar <br>
+                * Admin menggunakan akun resmi
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- =================== FITUR =================== -->
+<section id="fitur" class="feature-section">
+    <div class="container">
+
+        <h2 class="section-title">Fitur Unggulan Sistem</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Pemesanan Online</h3>
+                <p>Customer dapat memesan menu bakso secara langsung melalui sistem.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Pencatatan Otomatis</h3>
+                <p>Setiap transaksi langsung tercatat dan tersimpan dengan aman.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Manajemen Admin</h3>
+                <p>Admin dapat mengelola data menu, transaksi, dan pengguna.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Laporan Pemasukan</h3>
+                <p>Rekap pendapatan harian dan bulanan secara real-time.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- =================== TENTANG =================== -->
+<section id="tentang" class="about-section">
+    <div class="container about-grid">
+
+        <div>
+            <h2>Tentang Sistem</h2>
+            <p>
+                Sistem Informasi Penjualan Bakso Doa Ibu dikembangkan
+                sebagai solusi digital untuk meningkatkan efisiensi
+                pengelolaan usaha kecil menengah (UMKM).
+            </p>
+            <p>
+                Dengan sistem ini, seluruh aktivitas penjualan dapat
+                dipantau, dianalisis, dan dilaporkan secara sistematis.
+            </p>
+        </div>
+
+        <div class="access-card">
+            <h3>Hak Akses Pengguna</h3>
+            <ul>
+                <li><b>Customer:</b> Pemesanan dan riwayat transaksi</li>
+                <li><b>Admin:</b> Manajemen data & laporan pemasukan</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+    <div class="container footer-flex">
+        <p>
+            © 2025 Bakso Doa Ibu <br>
+            Sistem Informasi Penjualan Berbasis Web
+        </p>
+        <span>RPL | Sistem Informasi</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

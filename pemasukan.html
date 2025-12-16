@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pemasukan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<nav>
+    <a href="penjualan.html">← Kembali</a>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<div class="stat-box">
+    <h2>Total Pemasukan Hari Ini</h2>
+    <h1 id="total">Rp 0</h1>
+    <p>Data dihitung otomatis dari seluruh pesanan customer</p>
+
+    <button onclick="hapusPemasukan()" class="btn-danger"
+        style="margin-top:15px;">
+        Hapus Semua Data Pemasukan
+    </button>
+</div>
+
+<script src="script.js"></script>
+<script>
+cekAdmin();
+let d=JSON.parse(localStorage.getItem("penjualan"))||[];
+let t=d.reduce((a,b)=>a+b.harga,0);
+total.innerText="Rp "+t;
+</script>
+<script>
+cekAdmin();
+</script>
+</body>
+</html>

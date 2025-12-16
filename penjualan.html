@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Penjualan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<nav>
+    <h2>Admin Dashboard</h2>
+    <a href="pemasukan.html">Pemasukan</a>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<header class="section-title">
+    <h1>Daftar Pesanan Customer</h1>
+    <p>Semua pesanan yang masuk tercatat otomatis oleh sistem</p>
+</header>
+
+<table>
+<tr>
+    <th>No</th>
+    <th>Produk</th>
+    <th>Customer</th>
+    <th>Pembayaran</th>
+    <th>Harga</th>
+    <th>Status</th>
+</tr>
+</table>
+
+<script src="script.js"></script>
+<script>
+cekAdmin();
+
+let data = JSON.parse(localStorage.getItem("penjualan")) || [];
+let table = document.querySelector("table");
+
+data.forEach((p,i)=>{
+    table.innerHTML += `
+    <tr>
+        <td>${i+1}</td>
+        <td>${p.produk}</td>
+        <td>${p.customer}</td>
+        <td>${p.metode}</td>
+        <td>Rp ${p.harga}</td>
+        <td>${p.status}</td>
+    </tr>`;
+});
+</script>
+<script>
+cekAdmin();
+</script> 
+</body>
+</html>
